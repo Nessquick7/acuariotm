@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acuario Tus Mascotas | 22 años cuidando de tus mascotas</title>
+    <title>Acuario Tus Mascotas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
     <!-- Menú de navegación -->
@@ -34,7 +35,11 @@
                     <a href="https://www.instagram.com/acuariotusmascotas/" class="social-icon instagram" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
+                    <a href="https://www.facebook.com/acuariotusmascotas.empretienda.com.ar" class="social-icon facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
                 </div>
+                
             </nav>
             
             <button class="menu-toggle">
@@ -195,7 +200,6 @@
                 
                 <div class="franquicias-form">
                     <form class="contact-form" action="https://formsubmit.co/ivandacc1@gmail.com" method="POST">
-                        <input type="hidden" name="_next" value="https://nessquick7.github.io/acuariotm/gracias.html">
                         <input type="hidden" name="_subject" value="Nueva solicitud de franquicia">
                         <input type="hidden" name="_captcha" value="false">
                         
@@ -337,5 +341,21 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div class="modal-icon">
+            <svg viewBox="0 0 24 24" width="64" height="64">
+              <path fill="#1a4e8a" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h2 class="modal-title">¡Solicitud enviada!</h2>
+          <p class="modal-text">Hemos recibido tu información correctamente. Nos pondremos en contacto contigo en breve.</p>
+          <div class="modal-actions">
+            <button class="modal-btn">Entendido</button>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
