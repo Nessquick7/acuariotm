@@ -1,8 +1,8 @@
 /* Variables de color */
 :root {
-    --azul-primario: #3851a8;       /* Color principal solicitado */
-    --azul-medio: #5a6fcc;          /* 20% más claro */
-    --azul-claro: #e8ebf9;          /* Fondo muy claro */
+    --azul-primario: #3851a8;
+    --azul-medio: #5a6fcc;
+    --azul-claro: #e8ebf9;
     --azul-oscuro: #2c3e86;
     --naranja-primario: #ff6600;
     --naranja-oscuro: #cc5200;
@@ -34,7 +34,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     line-height: 1.2;
@@ -80,7 +85,8 @@ img {
 }
 
 .btn-primary:hover {
-    background-color: var(--azul-oscuro); /* #2c3e86 */
+    background-color: var(--azul-oscuro);
+    /* #2c3e86 */
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -140,14 +146,14 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: var(--azul-primario); /* #3851a8 */
+    background-color: var(--azul-primario);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 .header.scrolled {
     padding: 10px 0;
-    background-color: var(--azul-primario); /* Mantener igual al hacer scroll */
+    background-color: var(--azul-primario);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -158,7 +164,6 @@ img {
     height: 80px;
 }
 
-/* Nuevos estilos para logos sin redondeado */
 .header .logo img {
     height: 60px;
     transition: all 0.3s ease;
@@ -185,13 +190,13 @@ img {
 .logo img {
     height: 60px;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 0 5px rgba(255,255,255,0.3)); /* Sutil sombra blanca */
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.3));
     transition: all 0.3s ease;
 }
 
 .header.scrolled .logo img {
     height: 50px;
-    filter: drop-shadow(0 0 3px rgba(255,255,255,0.5)); /* Más sombra al hacer scroll */
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
 }
 
 .navbar {
@@ -208,7 +213,7 @@ img {
     padding: 10px 15px;
     font-weight: 600;
     font-size: 15px;
-    color: var(--blanco) !important; /* Fuerza el color blanco */
+    color: var(--blanco) !important;
     opacity: 0.9;
     transition: opacity 0.3s ease;
     position: relative;
@@ -224,7 +229,7 @@ img {
     position: absolute;
     width: 0;
     height: 2px;
-    background: var(--blanco); /* La línea inferior también en blanco */
+    background: var(--blanco);
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
@@ -269,7 +274,7 @@ img {
     background: none;
     border: none;
     font-size: 24px;
-    color: var(--blanco); /* Icono del menú hamburguesa en blanco */
+    color: var(--blanco);
     cursor: pointer;
     display: none;
     z-index: 1001;
@@ -357,9 +362,8 @@ img {
     transform: translateY(5px);
 }
 
-/* Secciones con fondos azules alternados */
 .nosotros-section {
-    background-color: var(--azul-claro); /* Fondo claro para contraste */
+    background-color: var(--azul-claro);
 }
 
 .nosotros-content {
@@ -418,7 +422,7 @@ img {
 }
 
 .historia-section {
-    background-color: var(--blanco); /* Fondo blanco para alternancia */
+    background-color: var(--blanco);
 }
 
 .timeline {
@@ -520,7 +524,7 @@ img {
     .timeline::before {
         left: 31px;
     }
-    
+
     .timeline-item,
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
@@ -530,8 +534,7 @@ img {
         padding-right: 25px;
         text-align: left;
     }
-    
-    /* Corrección específica para los círculos */
+
     .timeline-item::after,
     .timeline-item:nth-child(odd)::after,
     .timeline-item:nth-child(even)::after {
@@ -864,6 +867,7 @@ img {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -871,46 +875,54 @@ img {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0) translateX(-50%);
     }
+
     40% {
         transform: translateY(-20px) translateX(-50%);
     }
+
     60% {
         transform: translateY(-10px) translateX(-50%);
     }
 }
+
 /* Responsive */
 @media (max-width: 992px) {
-    /* Estilos para tablets y pantallas medianas */
+
     .nosotros-content,
     .franquicias-content,
     .contacto-content {
         flex-direction: column;
     }
-    
+
     .nosotros-image,
     .franquicias-form,
     .contacto-map {
         width: 100%;
     }
-    
+
     .benefits-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .timeline::before {
         left: 31px;
     }
-    
+
     .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
         text-align: left;
     }
-    
+
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
         left: 0;
@@ -918,11 +930,11 @@ img {
         padding-right: 25px;
         text-align: left;
     }
-    
+
     .timeline-item::after {
         left: 19px;
     }
-    
+
     .timeline-year {
         margin-bottom: 10px;
     }
@@ -933,7 +945,7 @@ img {
         width: 150px;
         height: 150px;
     }
-    /* Estilos para móviles en horizontal y tablets pequeñas */
+
     .menu-toggle {
         display: block;
     }
@@ -941,11 +953,11 @@ img {
     .header .logo img {
         height: 50px;
     }
-    
+
     .hero-content img {
         max-height: 150px;
     }
-   
+
     .navbar {
         position: fixed;
         top: 0;
@@ -961,47 +973,47 @@ img {
         transition: right 0.3s ease;
         z-index: 1000;
     }
-    
+
     .navbar.active {
         right: 0;
     }
-    
+
     .nav-list {
         flex-direction: column;
         width: 100%;
         margin-right: 0;
         margin-bottom: 30px;
     }
-    
+
     .nav-link {
         padding: 15px 0;
         display: block;
         color: var(--blanco) !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-    
+
     .social-links {
         margin-top: auto;
         width: 100%;
         justify-content: center;
     }
-    
+
     .hero-title {
         font-size: 3rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
-    
+
     .section {
         padding: 70px 0;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .hero-logo {
         height: 80px;
     }
@@ -1012,44 +1024,43 @@ img {
     .header .logo img {
         height: 40px;
     }
-    
+
     .hero-content img {
         max-height: 120px;
     }
-    
+
     .footer-logo img {
         height: 60px;
     }
-    
+
     .logo-circle {
         width: 50px;
         height: 50px;
     }
-    
+
     .hero-logo-circle {
         width: 120px;
         height: 120px;
     }
-    
+
     .footer-logo-circle {
         width: 80px;
         height: 80px;
     }
 
-    /* Estilos para móviles en vertical */
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .btn {
         width: 100%;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
     }
@@ -1064,7 +1075,6 @@ img {
     cursor: not-allowed;
 }
 
-/* Modal mejorado */
 .modal {
     display: none;
     position: fixed;
@@ -1077,13 +1087,13 @@ img {
     backdrop-filter: blur(4px);
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-  
-  .modal.show {
+}
+
+.modal.show {
     opacity: 1;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: white;
     margin: 10vh auto;
     padding: 30px;
@@ -1095,13 +1105,13 @@ img {
     transform: translateY(-20px);
     transition: transform 0.3s ease;
     position: relative;
-  }
-  
-  .modal.show .modal-content {
+}
+
+.modal.show .modal-content {
     transform: translateY(0);
-  }
-  
-  .close-modal {
+}
+
+.close-modal {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -1109,37 +1119,37 @@ img {
     color: #888;
     cursor: pointer;
     transition: color 0.2s;
-  }
-  
-  .close-modal:hover {
+}
+
+.close-modal:hover {
     color: #333;
-  }
-  
-  .modal-icon {
+}
+
+.modal-icon {
     margin: 0 auto 20px;
     width: 80px;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .modal-title {
-    color: #1a4e8a; /* Azul oscuro */
+}
+
+.modal-title {
+    color: #1a4e8a;
     font-size: 1.5rem;
     margin-bottom: 15px;
     font-weight: 600;
-  }
-  
-  .modal-text {
+}
+
+.modal-text {
     color: #555;
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 25px;
-  }
-  
-  .modal-btn {
-    background-color: #1a4e8a; /* Azul oscuro */
+}
+
+.modal-btn {
+    background-color: #1a4e8a;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -1147,28 +1157,64 @@ img {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .modal-btn:hover {
-    background-color: #143b6b; /* Azul más oscuro al hover */
-  }
-  @keyframes modalFadeIn {
-    from {opacity: 0; transform: translateY(-50px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
+}
 
-  .social-icon.facebook {
-    background-color: #1877F2; /* Azul oficial de Facebook */
+.modal-btn:hover {
+    background-color: #143b6b;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social-icon.facebook {
+    background-color: #1877F2;
     color: white;
 }
 
 .social-icon.facebook:hover {
-    background-color: #166FE5; /* Azul más oscuro para hover */
+    background-color: #166FE5;
     transform: translateY(-3px);
 }
 
-/* Ajuste para el espacio entre iconos */
+
 .social-links {
     display: flex;
-    gap: 8px; /* Espacio uniforme entre iconos */
+    gap: 8px;
+}
+
+.btn-pdf {
+    background-color: var(--azul-primario);
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-pdf:hover {
+    background-color: var(--azul-oscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-pdf i {
+    font-size: 18px;
+}
+
+.form-separator {
+    position: relative;
+    margin: 20px 0;
+    height: 1px;
+    background-color: var(--gris-medio);
 }
